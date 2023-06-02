@@ -1,0 +1,11 @@
+com.icebirdtech.dmp
+com.icebirdtech.dmp.cache
+com.icebirdtech.dmp.exception
+com.icebirdtech.dmp.externalapi
+com.icebirdtech.dmp.log
+com.icebirdtech.dmp.modal
+com.icebirdtech.dmp.rules
+com.icebirdtech.dmp.rules.implementation
+com.icebirdtech.dmp.service
+com.icebirdtech.dmp.web.controller
+com.icebirdtech.dmp.web.filter
