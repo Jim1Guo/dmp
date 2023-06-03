@@ -1,6 +1,8 @@
 # Getting Started
 This is a proof of concept API in Java that functions as a simple credit card fraud detection service.
-We build a service with endpoint named "/analyzeTransaction" that takes in a json object of 1 transaction with properties for card number and transaction amount. Then applies some business logic before returning a decision to approve or decline the transaction.
+We build a service with endpoint named "/analyzeTransaction" that takes in a json object 
+of 1 transaction with properties for card number and transaction amount. 
+Then applies some business logic before returning a decision to approve or decline the transaction.
 
 # Technical view
 ## Assumption
@@ -27,6 +29,8 @@ mvn spring-boot:run -Dspring-boot.run.profiles=local
 mvn spring-boot:build-image
 ### Run docker image with active Spring profile
 docker run -p 8080:8080 -e "SPRING_PROFILES_ACTIVE=local" 124e71a24cde
+### Kubernetes deployment
+kubectl create -f .\k8s2.yaml
 
 ## API documenation & monitoring
 ### Java Doc

@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: Pod
+metadata:
+   name: dmp-service
+spec:
+   containers:
+   - name: dmp-service
+     image: dmp-service:0.0.1-SNAPSHOT
