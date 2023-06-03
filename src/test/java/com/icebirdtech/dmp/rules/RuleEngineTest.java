@@ -10,6 +10,7 @@ import com.icebirdtech.dmp.modal.Decision;
 import com.icebirdtech.dmp.modal.Transaction;
 import com.icebirdtech.dmp.rules.implementation.RuleAmountPerTransaction;
 import com.icebirdtech.dmp.rules.implementation.RuleCardUsed;
+import com.icebirdtech.dmp.rules.implementation.RuleEngineImpl;
 import com.icebirdtech.dmp.rules.implementation.RuleTransactionAmount;
 
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
@@ -28,7 +29,7 @@ public class RuleEngineTest {
 		CardUsage cardUsage = new CardUsage(CARD_NUMBER, null);
 		RuleContext context = new RuleContext(transaction, cardUsage);
 		
-		RuleEngine ruleEngine = new RuleEngine();
+		RuleEngine ruleEngine = new RuleEngineImpl();
 		ruleEngine.getRules().add(new RuleTransactionAmount());
 		
 		Decision result = ruleEngine.apply(context);	
@@ -47,7 +48,7 @@ public class RuleEngineTest {
 		CardUsage cardUsage = new CardUsage(CARD_NUMBER, usageHistory);
 		RuleContext context = new RuleContext(transaction, cardUsage);
 		
-		RuleEngine ruleEngine = new RuleEngine();
+		RuleEngine ruleEngine = new RuleEngineImpl();
 		ruleEngine.getRules().add(new RuleCardUsed());
 		
 		Decision result = ruleEngine.apply(context);	
@@ -69,7 +70,7 @@ public class RuleEngineTest {
 		CardUsage cardUsage = new CardUsage(CARD_NUMBER, usageHistory);
 		RuleContext context = new RuleContext(transaction, cardUsage);
 		
-		RuleEngine ruleEngine = new RuleEngine();
+		RuleEngine ruleEngine = new RuleEngineImpl();
 		ruleEngine.getRules().add(new RuleAmountPerTransaction());
 		
 		Decision result = ruleEngine.apply(context);	
@@ -90,7 +91,7 @@ public class RuleEngineTest {
 		CardUsage cardUsage = new CardUsage(CARD_NUMBER, usageHistory);
 		RuleContext context = new RuleContext(transaction, cardUsage);
 		
-		RuleEngine ruleEngine = new RuleEngine();
+		RuleEngine ruleEngine = new RuleEngineImpl();
 		ruleEngine.getRules().add(new RuleTransactionAmount());
 		ruleEngine.getRules().add(new RuleCardUsed());
 		ruleEngine.getRules().add(new RuleAmountPerTransaction());
