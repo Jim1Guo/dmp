@@ -10,16 +10,16 @@ Then applies some business logic before returning a decision to approve or decli
 2. Resource are limited with local dev environment.
 
 ## Framework in use
-Spring Boot: Restful API
-Spring Validation: Input validation
-Spring Boot Webflux: api call to external microservice
-EhCache: cache for performance
-Rule Engine: Simple rule implementation built by hand
-Lombok: simple clean code
-Open API / Swagger: API documentation
-Spring Boot Actuator: API monitoring
-Log4j Slf4j: Logging
-Mockito: unit / integration testing
+- Spring Boot: Restful API
+- Spring Validation: Input validation
+- Spring Boot Webflux: api call to external microservice
+- EhCache: cache for performance
+- Rule Engine: Simple rule implementation built by hand
+- Lombok: simple clean code
+- Open API / Swagger: API documentation
+- Spring Boot Actuator: API monitoring
+- Log4j Slf4j: Logging
+- Mockito: unit / integration testing
 
 # Guides
 ## Build & Deployment
